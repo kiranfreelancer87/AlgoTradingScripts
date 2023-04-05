@@ -1,5 +1,6 @@
-import pandas as pd
+import json
 
-df = pd.read_csv('ind_nifty500list.csv')
-
-print(df['Symbol'])
+with open('data/ACC.json') as af:
+    data = json.loads(af.read())
+    print(len(data) / 15)
+    af.close()

@@ -53,7 +53,6 @@ def on_message(ws, message):
         if 'Complete' in msg and 'MessageType' and msg and msg['MessageType'] == 'AuthenticateResult':
             print("Authentication Completed")
             GetHistory(ws, symbolList[currentPos])
-            currentPos = currentPos + 1
         print(msg)
     except Exception as e:
         print(e)
